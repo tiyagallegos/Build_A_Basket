@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>HomePage</h1>
+    {% for family in families %}
+        <h1>{{ family.last_name }}</h1>
+        <p>Total Family members: {{ family.total_members}}</p>
+        <p>Adults: {{ family.adults}}</p>
+        <p>Adolescents: {{ family.adolescents }}</p>
+        <p>Infants: {{ family.infants }}</p>
+        <p>Needs: {{ family.needs }}</p>   
+        <p>Location: {{ family.closest_city }}</p>
+        <p>Comments: {{ family.comments }}</p>
+        <p>Date Posted: {{ family.date_posted }}</p>       
+    {% endfor %}
+{% endblock%}
+    
